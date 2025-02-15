@@ -77,3 +77,7 @@ pub async fn get_tree_entries(
     res.json(&entries);
     Ok(())
 }
+
+pub fn play_directory(ctx: &Context, req: &Request, res: &mut Response) -> Result<(), Error> {
+    Ok(())
+}

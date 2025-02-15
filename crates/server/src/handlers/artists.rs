@@ -34,3 +34,8 @@ pub async fn get_artist_tracks(
     res.json(&tracks);
     Ok(())
 }
+
+pub async fn play_artist_tracks(ctx: &Context, req: &Request, res: &mut Response) -> Result<(), Error> {
+    Ok(())
+}
+

@@ -59,11 +59,12 @@ pub extern "C" fn start_server() {
     app.get("/albums", get_albums);
     app.get("/albums/:id", get_album);
     app.get("/albums/:id/tracks", get_album_tracks);
-
+    app.put("/albums/:id/play", play_album);
     app.get("/artists", get_artists);
     app.get("/artists/:id", get_artist);
     app.get("/artists/:id/albums", get_artist_albums);
     app.get("/artists/:id/tracks", get_artist_tracks);
+    app.put("/artists/:id/play", play_artist_tracks);
 
     app.get("/browse/tree-entries", get_tree_entries);
 
@@ -93,6 +94,7 @@ pub extern "C" fn start_server() {
     app.post("/playlists/:id/tracks", insert_tracks);
     app.delete("/playlists/:id/tracks", remove_tracks);
     app.get("/playlists/:id", get_playlist);
+    app.put("/playlists/:id/play", play_playlist);
 
     app.get("/tracks", get_tracks);
     app.get("/tracks/:id", get_track);

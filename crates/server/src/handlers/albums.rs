@@ -24,3 +24,7 @@ pub async fn get_album_tracks(
     res.json(&tracks);
     Ok(())
 }
+
+pub async fn play_album(ctx: &Context, req: &Request, res: &mut Response) -> Result<(), Error> {
+    Ok(())
+}

@@ -399,3 +399,7 @@ pub async fn get_playlist(ctx: &Context, _req: &Request, res: &mut Response) -> 
     drop(player_mutex);
     Ok(())
 }
+
+pub async fn play_playlist(ctx: &Context, req: &Request, res: &mut Response) -> Result<(), Error> {
+    Ok(())
+}
